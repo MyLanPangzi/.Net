@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Text;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
@@ -14,7 +15,7 @@ namespace WebApplication2
 {
     public class Startup
     {
-        public IConfiguration Configuration { get;}
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             this.Configuration = new ConfigurationBuilder()
@@ -37,7 +38,8 @@ namespace WebApplication2
                 app.UseDeveloperExceptionPage();
             }
             app.UseFileServer();
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvcWithDefaultRoute();
+            app.UseMvc(ConfigRoute);
             //app.UseDefaultFiles();
             //app.UseStaticFiles();
             //app.Run(async (context) =>
@@ -45,6 +47,11 @@ namespace WebApplication2
             //    //throw new Exception("系统异常");
             //    await context.Response.WriteAsync(this.Configuration["message"]);
             //});
+        }
+        private void ConfigRoute(IRouteBuilder routeBuilder)
+        {
+            //routeBuilde.MapRoute("Default", "{controller=Home}/{action=Index}/id?");
+            routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
         }
     }
 }
