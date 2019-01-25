@@ -37,7 +37,7 @@ namespace WebApplication2
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseFileServer();
+            //app.UseFileServer();
             //app.UseMvcWithDefaultRoute();
             app.UseMvc(ConfigRoute);
             //app.UseDefaultFiles();
