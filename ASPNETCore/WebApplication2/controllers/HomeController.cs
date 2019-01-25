@@ -15,8 +15,22 @@ namespace Blank.Controllers
         }
         public ViewResult Index()
         {
-            Employee e = new Employee() { ID = 1, Name = "哈哈" };
-            return View(e);
+            HomePageModel model = new HomePageModel();
+
+            using (var context = new HelloWorldDbContext())
+            {
+                var employees = from e in context.Employees
+                                select e;
+                model.Employees = employees;
+
+            }
+
+            return View(model);
         }
+    }
+
+    public class HomePageModel
+    {
+        public IEnumerable<Employee> Employees { get; set; }
     }
 }

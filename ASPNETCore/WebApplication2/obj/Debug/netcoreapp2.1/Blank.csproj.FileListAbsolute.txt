@@ -17,7 +17,6 @@ C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\bin\Debug\netcore
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\bin\Debug\netcoreapp2.1\Blank.runtimeconfig.dev.json
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\bin\Debug\netcoreapp2.1\Blank.dll
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\bin\Debug\netcoreapp2.1\Blank.pdb
-C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.RazorAssemblyInfo.cache
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.RazorAssemblyInfo.cs
@@ -35,3 +34,4 @@ C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcore
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.RazorTargetAssemblyInfo.cs
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.Views.pdb
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.csproj.CopyComplete
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.csprojAssemblyReference.cache

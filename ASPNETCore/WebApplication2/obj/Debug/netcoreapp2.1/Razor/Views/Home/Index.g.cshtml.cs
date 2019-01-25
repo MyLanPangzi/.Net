@@ -43,7 +43,7 @@ namespace AspNetCore
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8def5a05147d41ae9dc3eaf14bdf876f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c8328ac4a8301087f76f9d714010e2d31cac4022899", async() => {
                 BeginContext(33, 72, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <title>Home 控制器下的 Index 方法</title>\r\n");
                 EndContext();
@@ -63,7 +63,7 @@ namespace AspNetCore
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(114, 161, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b9eb43e816147f1ba053fb94b383dcd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c8328ac4a8301087f76f9d714010e2d31cac4024156", async() => {
                 BeginContext(120, 94, true);
                 WriteLiteral("\r\n    <h1>欢迎!</h1>\r\n    <div>这个消息来自 Home 控制器下的 Index 的视图文件 index.cshtml </div>\r\n    <div>员工ID ");
                 EndContext();
