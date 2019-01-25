@@ -26,3 +26,12 @@ C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcore
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.RazorTargetAssemblyInfo.cache
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.dll
 C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.pdb
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\bin\Debug\netcoreapp2.1\Blank.Views.dll
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\bin\Debug\netcoreapp2.1\Blank.Views.pdb
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.TagHelpers.input.cache
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.TagHelpers.output.cache
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.RazorCoreGenerate.cache
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.RazorTargetAssemblyInfo.cs
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.Views.pdb
+C:\Users\Administrator\source\repos\ASPNETCore\WebApplication2\obj\Debug\netcoreapp2.1\Blank.csproj.CopyComplete

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Blank.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blank.Controllers
@@ -12,10 +13,10 @@ namespace Blank.Controllers
         {
 
         }
-        public ObjectResult Index()
+        public ViewResult Index()
         {
             Employee e = new Employee() { ID = 1, Name = "哈哈" };
-            return new ObjectResult(e);
+            return View(e);
         }
     }
 }
