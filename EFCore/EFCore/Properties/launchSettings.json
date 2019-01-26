@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "EFCore": {
-      "commandName": "Project",
-      "workingDirectory": "C:\\Users\\Administrator\\source\\repos\\EFCore\\EFCore"
-    }
-  }
-}
