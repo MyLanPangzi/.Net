@@ -11,11 +11,13 @@ namespace Blank.Models
     {
         public HelloWorldDbContext(DbContextOptions<HelloWorldDbContext> options) : base(options)
         {
+            
         }
 
         public HelloWorldDbContext()
         {
         }
+
         public DbSet<Employee> Employees { get; set; }
     }
 }

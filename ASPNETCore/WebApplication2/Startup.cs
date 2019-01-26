@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Blank.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication2
 {
@@ -28,6 +30,9 @@ namespace WebApplication2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddEntityFrameworkSqlServer();
+
+            services.AddDbContext<HelloWorldDbContext>(options => options.UseSqlServer(Configuration["database:connection"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
