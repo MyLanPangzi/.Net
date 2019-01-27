@@ -7,6 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using ContosoUniversity.Data;
 
 namespace ContosoUniversity
 {
@@ -14,7 +16,22 @@ namespace ContosoUniversity
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            var host = BuildWebHost(args);
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<SchoolContext>();
+                    DbInitializer.Initialze(context);
+                }
+                catch (System.Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "数据库初始化异常");
+                }
+            }
+            host.Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
