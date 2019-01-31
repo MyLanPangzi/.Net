@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ContosoUniversity.Models.Student>
+﻿@model PaginatedList<ContosoUniversity.Models.Student>
 
 @{
     ViewData["Title"] = "Index";
@@ -8,19 +8,33 @@
 
 <p>
     <a asp-action="Create">Create New</a>
+    <form asp-action="Index" method="get">
+        <div class="form-actions no-color">
+            <p>
+                Find by Name :
+                <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" />
+                <input type="submit" value="搜索" class="btn btn-default" />|
+                    <a asp-action="Index">Back to Full List</a>
+            </p>
+        </div>
+    </form>
 </p>
 <table class="table">
     <thead>
         <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.LastName)
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                        Last Name
+                    </a>
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.FirstMidName)
+                    First Name
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.EnrollmentDate)
-                </th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                        EnrollmentDate
+                    </a>
+                    </th>
             <th></th>
         </tr>
     </thead>
@@ -45,3 +59,24 @@
 }
     </tbody>
 </table>
+@{
+    var prevDisabled = Model.HasPreviousPage ? "" : "disabled";
+    var nextDisabled = Model.HasNextPage ? "" : "disabled";
+}
+<a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]"
+ asp-route-currentFilter="@ViewData["CurrentFilter"]"
+ asp-route-page="@(Model.PageIndex - 1)"
+ class="btn btn-default @prevDisabled"
+ >
+    Previos
+</a>
+<a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]"
+ asp-route-currentFilter="@ViewData["CurrentFilter"]"
+ asp-route-page="@(Model.PageIndex + 1)"
+ class="btn btn-default @nextDisabled"
+ >
+    Next
+</a>
+
+
+           
