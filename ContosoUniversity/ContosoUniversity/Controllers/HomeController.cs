@@ -5,21 +5,35 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ContosoUniversity.Models;
+using ContosoUniversity.Data;
+using ContosoUniversity.Models.SchoolViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly SchoolContext _context;
+        public HomeController(SchoolContext context)
+        {
+            this._context = context;
+        }
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public async Task<ActionResult> About()
         {
-            ViewData["Message"] = "Your application description page.";
+             var groups = from s in _context.Students
+                         group s by s.EnrollmentDate into dateGruop
+                         select new EnrollmentDateGroup()
+                         {
+                            EnrollmentDate = dateGruop.Key,
+                            StudentCount = dateGruop.Count()
+                         };
 
-            return View();
+            return View(await groups.AsNoTracking().ToListAsync());
         }
 
         public IActionResult Contact()
