@@ -207,9 +207,8 @@ namespace ContosoUniversity.Controllers
             }
             try
             {
-
-                await _context.SaveChangesAsync();
                 _context.Students.Remove(student);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             catch (DbUpdateException)
